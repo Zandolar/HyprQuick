@@ -1,0 +1,168 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Rofi Theme File
+ * Rofi Version: 1.7.3
+ **/
+
+/*****----- Configuration -----*****/
+configuration {
+    show-icons:                 false;
+}
+
+/* ---- Load pyal colors ---- */
+
+@theme "~/.config/rofi/colors.rasi"
+
+/*****----- Global Properties -----*****/
+* {
+    font:                        "CaskaydiaCove Nerd Font 13";
+    background:                  @secondary-container;
+    background-alt:              @surface-container-highest;
+    foreground:                  @secondary-fixed-dim;
+    selected:                    @on-secondary-container;
+    active:                      @on-surface;
+    urgent:                      @on-surface-variant;
+}
+
+/*
+USE_ICON=YES
+*/
+
+/*****----- Main Window -----*****/
+window {
+    transparency:                "screenshot";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       800px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               50px;
+    border-color:                @on-surface-variant;
+    cursor:                      "default";
+    background-color:            @surface-container-highest;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    margin:                      0px;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                     true;
+    spacing:                     25px;
+    padding:                     100px 50px;
+    border:                      0px;
+    border-radius:               40px;
+    border-color:                @on-surface-variant;
+    background-color:            transparent;
+    background-image:            url("~/.cache/.current_wallpaper", width);
+    text-color:                  @secondary-fixed-dim;
+    children:                    [ "textbox-prompt-colon", "dummy", "prompt"];
+}
+
+dummy{
+    background-color:            transparent;
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    padding:                     10px 18px 10px 13px;
+    border-radius:               100%;
+    background-color:            @urgent;
+    text-color:                  @secondary-container;
+}
+prompt {
+    enabled:                     true;
+    padding:                     10px;
+    border-radius:               100%;
+    background-color:            @active;
+    text-color:                  @secondary-container;
+}
+
+/*****----- Message -----*****/
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               15px;
+    border-color:                @on-surface-variant;
+    background-color:            @surface-container-highest;
+    text-color:                  @secondary-fixed-dim;
+}
+textbox {
+    background-color:            transparent;
+    text-color:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                     true;
+    columns:                     6;
+    lines:                       1;
+    cycle:                       true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    
+    spacing:                     20px;
+    background-color:            transparent;
+    cursor:                      "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                     true;
+    padding:                     30px 12px 44px 10px;
+    border:                      0px solid;
+    border-radius:               100%;
+    border-color:                @on-surface-variant;
+    background-color:            transparent;
+    text-color:                  @secondary-fixed-dim;
+    cursor:                      pointer;
+}
+element-text {
+    font:                        "feather 28";
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color:            var(background-alt);
+    text-color:                  var(foreground);
+}
+element normal.urgent,
+element alternate.urgent,
+element selected.active {
+    background-color:            var(urgent);
+    text-color:                  var(background);
+}
+element normal.active,
+element alternate.active,
+element selected.urgent {
+    background-color:            var(active);
+    text-color:                  var(background);
+}
+element selected.normal {
+    background-color:            var(selected);
+    text-color:                  var(background);
+}
