@@ -1,0 +1,22 @@
+{
+  "wallpaper": "{{image}}",
+  "alpha": "70",
+  "colors": {
+    "color0": "{{colors.surface.dark.hex | lighten: -5.0}}",
+    "color1": "",
+    "color2": "",
+    "color3": "{{colors.surface_dim.dark.hex}}",
+    "color4": "",
+    "color5": "{{colors.on_secondary.dark.hex}}",
+    "color6": "",
+    "color7": "",
+    "color8": "",
+    "color9": "",
+    "color10": "{{colors.secondary.dark.hex}}",
+    "color11": "",
+    "color12": "",
+    "color13": "{{colors.primary_fixed.dark.hex}}",
+    "color14": "",
+    "color15": "{{colors.on_surface_variant.dark.hex}}"
+  }
+}
