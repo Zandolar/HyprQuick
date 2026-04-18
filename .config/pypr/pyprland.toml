@@ -1,0 +1,69 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "toggle_special"
+]
+
+[scratchpads.volume]
+animation = "fromRight"
+command = "pavucontrol-qt"
+class = "pavucontrol-qt"
+lazy = true
+position = "59% 4%"
+size = "40% 90%"
+unfocus = "hide"
+
+[scratchpads.network]
+animation = "fromRight"
+command = "nm-connection-editor"
+class = "nm-connection-editor"
+lazy = true
+position = "59% 4%"
+size = "40% 90%"
+unfocus = "hide"
+
+[scratchpads.qt6]
+animation = "fromTop"
+command = "qt6ct"
+class = "qt6ct"
+lazy = true
+size = "80% 90%"
+
+
+[scratchpads.qt5]
+animation = "fromTop"
+command = "qt5ct"
+class = "qt5ct"
+lazy = true
+size = "80% 90%"
+
+[scratchpads.nwg]
+animation = "fromTop"
+command = "nwg-look"
+class = "nwg-look"
+lazy = true
+size = "80% 90%"
+
+[scratchpads.btman]
+animation = "fromRight"
+command = "blueman-manager"
+class = "blueman-manager"
+lazy = true
+position = "59% 4%"
+size = "40% 90%"
+unfocus = "hide"
+
+[scratchpads.themix]
+animation = "fromTop"
+command = "themix-gui"
+class = "__main__.py"
+lazy = true
+size = "80% 90%"
+
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class kitty-dropterm"
+class = "kitty-dropterm"
+size = "75% 60%"
+
+
